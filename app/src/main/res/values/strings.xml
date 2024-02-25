@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AppCinemo</string>
+    <string name="app_name">Cinemo</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
 </resources>
