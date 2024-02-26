@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appcinemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".AppCinemo"
         android:allowBackup="true"
