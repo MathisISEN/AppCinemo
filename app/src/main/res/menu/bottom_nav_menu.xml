@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/homeMenu"
         android:title="@string/home"
         android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/tvShowMenu"
-        android:title="@string/tvshow"
+        android:title="TV Show"
         android:icon="@drawable/ic_tv"/>
     <item
         android:id="@+id/searchMenu"
         android:title="@string/search"
         android:icon="@drawable/ic_search"/>
-
 </menu>

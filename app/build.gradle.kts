@@ -1,9 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id ("com.google.gms.google-services")
-    id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-android")
 }
 
 android {
@@ -30,11 +30,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+    hilt {
+        enableAggregatingTask = true
     }
 }
 
@@ -45,7 +48,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    implementation ("com.google.android.material:material:1.5.0")
+    implementation ("com.google.android.material:material:1.11.0")
     implementation ("androidx.legacy:legacy-support-v4:1.0.0")
 
 
@@ -60,14 +63,21 @@ dependencies {
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
     //Dagger
-    implementation ("com.google.dagger:hilt-android:2.41")
-    implementation ("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation ("androidx.test.espresso:espresso-contrib:3.4.0")
-    kapt ("com.google.dagger:hilt-android-compiler:2.40.1")
-    kapt ("androidx.hilt:hilt-compiler:1.0.0")
+    implementation ("com.google.dagger:hilt-android:2.50")
+    kapt ("com.google.dagger:hilt-compiler:2.50")
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.12.0")
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    //noinspection KaptUsageInsteadOfKsp
+    kapt ("com.github.bumptech.glide:compiler:4.12.0")
+
+    // coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // ui
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 
 }
+
