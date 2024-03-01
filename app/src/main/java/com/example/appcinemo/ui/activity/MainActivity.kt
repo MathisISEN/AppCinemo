@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 import com.example.appcinemo.R
 import com.example.appcinemo.ui.fragments.MovieFragment
-import com.example.cinemo.ui.fragments.SearchFragment
-import com.example.cinemo.ui.fragments.TvShowFragment
+import com.example.appcinemo.ui.fragments.SearchFragment
+import com.example.appcinemo.ui.fragments.TvShowFragment
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() ,BottomNavigationView.OnNavigationItemSelectedListener{
